@@ -1,0 +1,21 @@
+<h1 class="center">{{title}}</h1>
+<form action="/api/members" method="POST">
+    <div>
+        <label>Name</label>
+        <input type="text" name="name">
+
+    </div>
+    <div>
+        <label>Email</label>
+        <input type="text" name="email">
+    </div>
+    <input type="submit" value="Add Member">
+</form>
+<h2>Members</h2>
+<ul>
+    {{#each members}}
+    <li>
+        {{this.name}}:{{this.email}}
+    </li>
+    {{/each}}
+</ul>
